@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+.header {
+  width: 100%;
+  height: 75px;
+  background-color: #41412d;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  color: rgb(177, 222, 243);
+  z-index: 12;
+}
+.header .search-box input {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  height: 30px;
+  font-size: 1.2rem;
+  padding: 0 1 rem;
+}
+.container {
+  width: 100%;
+  height: 100px auto;
+  display: flex;
+}
+.anime-info {
+  width: 320px;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+}
+.anime-row {
+  display: flex;
+  flex-direction: column;
+}
+.anime-row .row {
+  display: flex;
+  gap: 20px;
+  margin-left: 20rem;
+}
+.anime-row .text-heading {
+  margin-left: 20rem;
+  margin-top: 1rem;
+}
+.card {
+  width: 230px;
+  height: 300px;
+  padding: 0 0 1rem 0;
+  box-shadow: 5px 5px 5px 5px rgba(9, 11, 92, 0.541);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+.card img {
+  width: 100%;
+  height: 80%;
+}
+.anime-content {
+  padding: 40px;
+  margin: 80px 0;
+}
+.anime-content img {
+  width: 150px;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  padding: 1rem;
+  background-color: rgba(212, 187, 163, 0.9);
+  border-radius: 10rem 3rem 0 0;
+  text-align: justify;
+  opacity: 0;
+  transition: 0.5s;
+}
+.animeInfo:hover .overlay {
+  opacity: 1;
+  height: 90%;
+}
+.overlay .synopsis {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  overflow: auto;
+}
+.myList {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  padding: 0.5rem;
+  background-color: rgb(211, 177, 145);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.spinner {
+  margin: 20px auto;
+  width: 500px;
+  height: 450px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spinner .circle {
+  animation: spinners linear infinite;
+  position: absolute;
+  border: 5px solid transparent;
+  border-top-color: #f00;
+  border-radius: 50%;
+}
+
+.spinner .one {
+  width: 50px;
+  height: 50px;
+  border-top-color: #8f3b76;
+  animation-duration: 0.85s;
+}
+
+.spinner .two {
+  width: 70px;
+  height: 70px;
+  border-top-color: #c7417b;
+  animation-duration: 0.95s;
+}
+
+.spinner .three {
+  width: 100px;
+  height: 100px;
+  border-top-color: #f5487f;
+  animation-duration: 1.05s;
+}
+
+@keyframes spinners {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
